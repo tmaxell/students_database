@@ -150,7 +150,7 @@ string generateRandomName() {
 string generateRandomBirthDate() {
     int day = rand() % 28 + 1;
     int month = rand() % 12 + 1;
-    int year = rand() % 10 + 1990; // Год от 1990 до 1999
+    int year = rand() % 10 + 1995; 
     return to_string(day) + "/" + to_string(month) + "/" + to_string(year);
 }
 
