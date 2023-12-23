@@ -177,6 +177,14 @@ Node* generateAndInsertData(Node* root, int numRecords) {
     return root;
 }
 
+void deleteTree(Node* root) {
+    if (root != nullptr) {
+        deleteTree(root->left);
+        deleteTree(root->right);
+        delete root;
+    }
+}
+
 int main() {
     setlocale(LC_ALL, "Russian");
 
@@ -199,6 +207,8 @@ int main() {
 
    // cout << "All students in sorted order:" << endl;
    //  inOrderTraversal(root);
+
+    deleteTree(root);
 
     return 0;
 }
